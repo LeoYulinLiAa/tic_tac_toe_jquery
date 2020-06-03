@@ -22,12 +22,11 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: "style.css"
+      filename: "ttt.css"
     }),
     new CopyPlugin({
       patterns: [
-        { from: './html' },
-        { from: './lib' }
+        { from: './html' }
       ],
     }),
   ],

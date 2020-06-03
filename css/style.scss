@@ -1,0 +1,41 @@
+$background-color: #eae6db;
+$color-primary: #362b20;
+$color-secondary: #6d5741;
+$color-active: #efdc06;
+$color-danger: #ee6d3e;
+$color-success: #add00c;
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: $color-primary;
+  margin: 0;
+  background: $background-color;
+}
+a {
+  color: $color-primary;
+  text-decoration: underline;
+}
+a:active {
+  color: $color-secondary;
+  text-decoration: underline;
+}
+.main {
+  max-width: 768px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-flow: column;
+  padding: 1rem;
+}
+.main h1 {
+  font-weight: 300;
+}
+.main small {
+  color: $color-secondary;
+}
+.main figure {
+  max-width: 384px;
+  margin: 1rem;
+  background-color: $color-primary;
+}
