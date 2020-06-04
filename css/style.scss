@@ -10,14 +10,17 @@ body {
   margin: 0;
   background: $background-color;
 }
+
 a {
   color: $color-primary;
   text-decoration: underline;
 }
+
 a:active {
   color: $color-secondary;
   text-decoration: underline;
 }
+
 .main {
   max-width: 768px;
   margin: auto;
@@ -28,14 +31,61 @@ a:active {
   flex-flow: column;
   padding: 1rem;
 }
+
 .main h1 {
   font-weight: 300;
 }
+
 .main small {
   color: $color-secondary;
 }
+
 .main figure {
-  max-width: 384px;
   margin: 1rem;
-  background-color: $color-primary;
+}
+
+ul {
+  display: flex;
+  width: 384px;
+  height: 384px;
+  flex-wrap: wrap;
+  border: 2px solid $color-primary;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+  li {
+    background-color: $background-color;
+    border: 2px solid $color-primary;
+    box-sizing: border-box;
+    width: calc(100% / 3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 60px;
+    line-height: 1;
+    &:hover {
+      background-color: $color-active;
+    }
+    &::after {
+      content: "　";
+      line-height: 1;
+    }
+    &.x {
+      &::after {
+        content: "×";
+      }
+      &:hover {
+        background-color: $background-color;
+      }
+    }
+    &.o {
+      &::after {
+        content: "○";
+      }
+      &:hover {
+        background-color: $background-color;
+      }
+    }
+  }
 }
